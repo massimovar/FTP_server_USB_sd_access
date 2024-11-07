@@ -1,0 +1,65 @@
+Name: NetLogic
+Type: NetLogicCategoryFolder
+Children:
+- Name: FtpServerLogic
+  Id: g=6e847a1bc270b2c7a1b8979274706c84
+  Type: NetLogic
+  WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
+  Children:
+  - Name: IPAddress
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "192.168.0.1"
+  - Name: Port
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 21
+  - Name: FilesystemRoot
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Value: "%USB1%"
+  - Name: MinimumPASVPort
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 1024
+  - Name: MaximumPASVPort
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 1100
+  - Class: Method
+    Name: StartFtpServer
+  - Class: Method
+    Name: StopFtpServer
+  - Name: Username
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "admin"
+  - Name: Password
+    Type: BaseDataVariableType
+    DataType: Password
+    Value: "admin"
+  - Name: ServerCertificateFile
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+  - Name: ServerPrivateKeyFile
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+  - Name: UseFTPS
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: ns=4;LibraryReference
+    Type: ObjectLibraryReference
+    DataType: ObjectLibraryReferenceDataType
+    Value: 
+     {
+      "TypeId": {
+       "Id": 72,
+       "Namespace": 4
+      },
+      "Body": {
+       "libraryGuid": "f0701375ee41467993d632db6a8fdaa5",
+       "objectGuid": "beeca82c72c3a39a5518d7152345766a",
+       "objectVersion": 1,
+       "highestIgnoredVersion": 0
+      }
+     }
